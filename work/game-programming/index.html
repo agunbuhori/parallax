@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<title>Custom Puzzle - WorldSkills 2015</title>
+</head>
+<body>
+
+	<!-- START -->
+	<div id="start">
+		<div class="box">
+			<h2>Welcome do Custom Puzzle!</h2>
+			<p>This game consists in you make your puzzle game</p>
+			<form action="#" method="post" id="startForm">
+				<div class="group">
+					<label for="name">Name</label>
+					<input type="text" name="name" id="name" required />
+				</div>
+				<div class="group">
+					<label for="difficult">Difficult</label>
+					<select type="text" name="difficult" id="difficult" >
+						<option value="1">EASY</option>
+						<option value="2">MEDIUM</option>
+						<option value="3">HARD</option>
+					</select>
+				</div>
+				<!-- DROP -->
+				<div class="group" id="drop">
+					<div class="preview"></div>
+					<p class="drop-photo-area">
+						<span>Drop your photo here!</span>
+                        <input type="file" required>
+					</p>
+				</div><!-- END DROP -->
+                <div id="startErrMessage">
+
+                </div>
+				<div class="group">
+					<button type="submit" name="submit">START</button>
+				</div>
+			</form>
+		</div>
+	</div><!-- END START -->
+
+	<!-- END -->
+	<div id="end">
+		<div class="box">
+			<h3>Congratulations! You have solved the puzzle!</h3>
+			<p>You did it!</p>
+			<table>
+				<thead>
+					<tr>
+						<th>POSITION</th>
+						<th>LEVEL</th>
+						<th>NAME</th>
+						<th>TIME</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+			<button class="btn btn-restart" onclick="end.remove(); return false;">RESTART APPLICATION</button>
+		</div>
+	</div><!-- END END -->
+
+	<!-- GAMECONTAINER -->
+	<div id="gameContainer">
+		<div class="container">
+			<!-- PLAYERNAME -->
+			<span id="playername"></span>
+			<!-- TIMER -->
+			<div id="timer">
+				<span>00:00</span>
+			</div>
+			<div id="puzzleContainer">
+				<!-- PUZZLE -->
+				<div id="puzzle"></div>
+				<div id="puzzleDestination"></div>
+			</div>
+			<div class="buttons">
+				<button class="btn btn-pause">PAUSE</button>
+				<button class="btn btn-restart">RESTART</button>
+			</div>
+		</div>
+	</div><!-- END GAMECONTAINER -->
+
+	<!-- SCRIPTS -->
+	<script src="JQuery/jquery-2.1.1.min.js"></script>
+	<script src="JQuery/jquery-ui-1.11.2/jquery-ui.min.js"></script>
+	<script type="text/javascript" src='js/script.js'></script>
+
+</body>
+</html>

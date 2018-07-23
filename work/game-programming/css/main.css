@@ -1,0 +1,210 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	outline: none;
+	font-family: "Arial",sans-serif;
+	color: #282828;
+	text-decoration: none;
+	list-style-type: none;
+}
+body{
+	background: #009BBC;
+	width: 100%;
+	height: 100%;
+}
+.group{
+	margin-bottom: 10px;
+}
+.group input,
+.group select{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+}
+.group label{
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 13px;
+}
+.group *{
+	display: block;
+}
+.box,
+.container{
+	width: 1140px;
+	margin: auto;
+}
+
+.box{
+	margin-top: 100px;
+	background: white;
+	border-radius: 4px;
+	padding: 30px
+}
+button{
+	width: 100%;
+	height: 60px;
+}
+#start,
+#end{
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	background: rgba(0,0,0,0.9);
+	z-index: 999999;
+}
+.hide{
+	display: none !important;
+}
+
+
+
+#gameContainer .container{
+	padding-top: 70px;
+	display: block;
+	position: relative;
+}
+#preview{
+	position: absolute;
+	display: block;
+	width: 165px;
+	height: 165px;
+	bottom: 394px;
+  	right: -190px;
+	background: white;
+}
+#drop .preview{
+	float: left;
+	margin-right: 10px;
+	height: 100px;
+  	width: 100px;
+	background: rgba(0,0,0,0.2);
+}
+#drop{
+	display: block;
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	border: dotted 1px rgba(0,0,0,0.2);
+}
+p{
+	text-align: center;
+}
+h3{
+	text-align: center;
+}
+table th,
+table td{
+	padding: 10px;
+	border: solid 1px rgba(0,0,0,0.2);
+}
+table{
+	width: 100%;
+	border-collapse: collapse;
+}
+#playername,
+#timer{
+	display: block;
+	text-align: center;
+}
+
+#playername{
+	background: white;
+	height: 40px;
+	line-height: 40px;
+	font-size: 22px;
+	font-weight: bold;
+}
+#timer span{
+	color: white;
+}
+#timer{
+	background: rgba(0,0,0,0.5);
+	font-size: 18px;
+	height: 40px;
+	line-height: 40px;
+	color: white;
+}
+h2{
+	text-align: center;
+}
+#preview,
+#drop .preview{
+	background: url(../imgs/example.jpg) no-repeat;
+	background-size: 100%;
+}
+
+#puzzleContainer > div:last-child{
+	margin-right: 0;
+}
+#puzzleContainer > div{
+	float: left;
+	width: 500px;
+	height: 500px;
+	margin-right: 139px;
+}
+
+#puzzle,
+#puzzleDestination {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+#puzzleDestination > div {
+	opacity: .5;
+}
+
+#puzzleDestination > div[data-hasdone="true"] {
+	opacity: 1;
+}
+
+#puzzle > div {
+	transition: transform .25s ease;
+}
+
+#puzzleDestination > div {
+	transition: opacity .25s ease;
+}
+
+
+#puzzle > div.active {
+	transform: scale(1.1) translateZ(20px);
+	z-index: 1;
+}
+
+#puzzle > div > div,
+#puzzleDestination > div > div {
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	transition: transform .25s ease;
+}
+
+#puzzle > div > div > div,
+#puzzleDestination > div > div > div {
+	width: 500px;
+	height: 500px;
+}
+
+.drop-photo-area {
+	position: relative;
+}
+
+.drop-photo-area input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+
+#start { display: none; }
+#end { display: none; }
+
+.you {
+	background: #eee;
+}
